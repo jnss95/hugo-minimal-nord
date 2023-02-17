@@ -1,0 +1,18 @@
+<link rel="icon" href={{ .Site.Params.favicon | default "/fav.png" }} type="image/gif">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+{{ if eq hugo.Environment "production" }}
+{{ $css := resources.Get "css/compiled/main.css" }}
+{{ $style := $css | resources.Minify }}
+<link href="{{ $style.RelPermalink}}" rel="stylesheet">
+{{ else }}
+{{ $style := resources.Get "css/compiled/main.css" }}
+<link href="{{ $style.RelPermalink}}" rel="stylesheet">
+{{ end}}
+{{ $style := resources.Get "css/compiled/main.css" }}
+<link href="{{ $style.RelPermalink}}" rel="stylesheet">
+<link href="{{ .Site.Params.staticPath }}/css/nord.css" rel="stylesheet">
+<link href="/css/style.css" rel="stylesheet">
+

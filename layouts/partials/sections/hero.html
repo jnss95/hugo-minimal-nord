@@ -1,0 +1,45 @@
+{{ if .Site.Params.hero.enable | default false }}
+<div class="container mx-auto flex flex-col h-screen overflow-hidden">
+    <div class="flex justify-end h-11 mx-10 my-5">
+        <a href="#" class="text-nord-10">Impressum</a>
+        <!---<a href="#" class="mr-4 text-nord-10">Über</a>
+        <a href="#" class="mr-4 text-nord-10">Vita</a>
+        <a href="#" class="mr-4 text-nord-10">Kontakt</a>
+        <a href="#" class="text-nord-10">Blog</a>--->
+    </div>
+    <section class="mx-6 xl:px-72 lg:px-20 h-full md:h-auto md:mt-auto md:mb-auto flex flex-col-reverse md:flex-row justify-center">
+        <div>
+            <div class="">
+                <span class="text-sm font-semibold">Hey, ich bin</span>
+                <h2 class="text-7xl mt-3 text-nord-10 font-semibold">Jonas.</h2>
+                <h3 class="text-4xl mt-3 font-semibold opacity-70">Ich entwickle vernetzte Geräte</h3>
+                <p class="hero-content mt-3">
+                    Ein Elektroingenieur mit Passion für Hardware, Software und das Web. Ich schaffe innovative Lösungen für
+                    eine vernetze Zukunft.
+                </p>
+            </div>
+            <div class="mt-5 mb-5 text-base">
+                <a href="#" class="px-4 py-2 font-semibold text-sm text-nord-6 bg-nord-10 text-white rounded-full shadow-sm" data-mailto>
+                    Kontakt
+                </a>
+                <a href="https://github.com/jnss95" aria-label="Jonas Github Profil" class="mx-3 p-2 font-semibold text-sm bg-nord-10 text-nord-1 text-white rounded-full shadow-sm" download="">
+                    <span class="icon-github"></span>
+                </a>
+            </div>
+        </div>
+        <div class="mb-8 ml-10 md:my-auto">
+            <img src="{{ .Site.Params.staticPath }}/images/hero.jpg" alt="hero" class="w-44 md:w-64 mx-auto object-cover md:rounded-2xl rounded-full" style="max-height:313px;">
+        </div>
+
+    </section>
+</div>
+    <script type="text/javascript">
+        let enc = atob('bWFpbHRvOmhlbGxvQGpzY2h1bHouZGU=');
+        // replace the link behin every a with data-mailto attribute to the encoded mailto link when hovering over it
+        document.querySelectorAll('[data-mailto]').forEach((elem) => {
+            elem.addEventListener('mouseover', () => {
+                elem.href = enc;
+            });
+        });
+    </script>
+    {{ end }}
