@@ -1,13 +1,16 @@
 {
-  "name": "my-theme",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "hugo-minimal-nord",
+  "version": "0.0.1",
+  "description": "A minimalistic hugo theme build around the nord color scheme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jnss95/hugo-minimal-nord"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit -w"
   },
-  "author": "",
+  "author": "Jonas Schulz",
   "license": "MIT",
   "devDependencies": {
     "autoprefixer": "^10.4.13",

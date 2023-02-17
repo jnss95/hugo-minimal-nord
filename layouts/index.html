@@ -1,9 +1,12 @@
 {{ define "head" }}
-<title>Jonas Schulz</title>
-{{ end }}
 
+{{ end }}
+{{ define "title" }}
+    {{ .Params.profile.title }}
+{{ end }}
 {{ define "main" }}
-    <div class="">
-        {{- partial "sections/hero.html" . -}}
+    <div class="flex flex-col justify-center h-full">
+        {{ partial "sections/hero2.html" }}
     </div>
+    
 {{ end }}

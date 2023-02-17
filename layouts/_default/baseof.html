@@ -7,10 +7,11 @@
         <title>{{- block "title" . }} {{- end }}</title>
     </head>
     
-    <body class="bg-nord-4 text-nord-3 dark:bg-nord-0 dark:text-nord-4">
-        <div id="content">
+    <body class="flex flex-col bg-nord-5 text-nord-3 dark:bg-nord-0 dark:text-nord-4 min-h-screen">
+        {{- partial "header.html" . -}}
+        <main class="container mx-auto px-5 grow">
             {{- block "main" . }}{{- end }}
-        </div>
+        </main>
         {{- partial "footer.html" . -}}
     </body>
 </html>

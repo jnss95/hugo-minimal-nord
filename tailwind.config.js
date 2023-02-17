@@ -4,6 +4,14 @@ module.exports = {
         "./content/**/*.{html,md}"
     ],
     theme: {
+        extend: {
+            spacing: {
+                "header": "2.75rem",
+                "header-margin": "1rem",
+                "footer": "2.75rem",
+                "footer-margin": "1rem",
+            }
+        },
         colors: {
             "bg-light": "#F9F5D7",
             "fg-light": "#282828",
