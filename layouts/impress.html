@@ -1,0 +1,11 @@
+{{ define "head" }}
+
+{{ end }}
+{{ define "title" }}
+    {{ .Params.profile.title }}
+{{ end }}
+{{ define "main" }}
+    <div class="grow flex flex-col justify-center">
+        {{ partial "sections/hero2.html" }}
+    </div>
+{{ end }}
