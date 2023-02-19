@@ -1,0 +1,44 @@
+{{ define "title" }}
+{{ .Page.Title }}
+{{ end }}
+{{ define "main" }}
+<div class="content-single w-full">
+    <div class="content-wrapper w-[calc(52rem)] mx-auto ">
+        {{- $paginator := .Paginate .Pages }}
+        {{- range $index, $page := $paginator.Pages }}
+        <article>
+            <header>
+                <h2>{{ .Title }}</h2>
+                <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+            </header>
+            <p>
+                {{ .Summary }}
+            </p>
+        </article>
+        {{ end }}
+
+        {{- if gt $paginator.TotalPages 1 }}
+        <nav class="text-center">
+            {{- if $paginator.HasPrev }}
+            <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">
+                «&nbsp;{{ i18n "prev_page" }}&nbsp;
+                
+            </a>
+            {{- sub $paginator.PageNumber 1 }}/{{ $paginator.TotalPages }}
+            {{- end }}
+            {{- if $paginator.HasNext }}
+            <a class="next" href="{{ $paginator.Next.URL | absURL }}">
+                {{- i18n "next_page" }}&nbsp;
+                {{- if (.Param "ShowPageNums") }}
+                {{- add 1 $paginator.PageNumber }}/{{ $paginator.TotalPages }}
+                {{- end }}&nbsp;»
+            </a>
+            {{- end }}
+        </nav>
+        {{- end }}
+    </div>
+</div>
+
+
+
+{{ end }}

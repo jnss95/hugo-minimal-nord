@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.content-wrapper a {
+    @apply text-nord-10 hover:text-nord-10 visited:text-nord-15;
+ }
 
 
 h1 {

@@ -8,6 +8,11 @@
 {{ $style := $css | resources.Minify }}
 <link href="{{ $style.RelPermalink}}" rel="stylesheet">
 {{ else }}
+{{ $custom := resources.Get "css/compiled/custom.css" }}
+{{ if $custom }}
+<link href="{{ $custom.RelPermalink}}" rel="stylesheet">
+{{ end }}
+
 {{ $style := resources.Get "css/compiled/main.css" }}
 <link href="{{ $style.RelPermalink}}" rel="stylesheet">
 {{ end}}
