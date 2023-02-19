@@ -1,6 +1,12 @@
+{{ define "title" }}
+    {{ .Page.Title }}
+{{ end }}
 {{ define "main" }}
-<div class="content-single xl:px-40">
-    {{ .Content }}
+<div class="content-single w-full">
+    <div class="content-wrapper w-[calc(52rem)] mx-auto ">
+        {{ .Content }}
+    </div>
+    
 </div>
 
 {{ end }}
