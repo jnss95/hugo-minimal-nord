@@ -6,6 +6,7 @@ A minimalistic hugo theme build around the nord color scheme
 - Uses Hugo's asset generator with pipelining, fingerprinting, bundling and minification by default.
 - Build using TailwindCSS, thus easily customizable
 - Zero lines of JavaScript in the theme
+    - Ok maybe four, but they are only for the optional email obfuscation
 - Light/Dark theme (uses the system preference).
 - SEO Optimized.
 
